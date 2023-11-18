@@ -11,52 +11,52 @@ using namespace std;
 // In VS Code, you can select the comment block and type Ctrl + /
 
 void task1() {
-    // Board board{SCORE_PRESET};
-    // cout << board;
-    // cout << "Score: " << board.getBoardScore() << endl;
-    // cout << "ID: " << board.getID() << endl;
+    Board board{SCORE_PRESET};
+    cout << board;
+    cout << "Score: " << board.getBoardScore() << endl;
+    cout << "ID: " << board.getID() << endl;
 
-    // while (true) {
-    //     int row, col;
-    //     do {
-    //         cout << "Select a row from 0 to " << BOARD_SIZE - 1 << " (top to bottom). Type -1 to quit game." << endl;
-    //         cin >> row;
-    //     } while (row < -1 || row >= BOARD_SIZE);
-    //     if (row == -1) break;
-    //     do {
-    //         cout << "Select a column from 0 to " << BOARD_SIZE - 1 << " (left to right). Type -1 to quit game." << endl;
-    //         cin >> col;
-    //     } while (col < -1 || col >= BOARD_SIZE);
-    //     if (col == -1) break;
+    while (true) {
+        int row, col;
+        do {
+            cout << "Select a row from 0 to " << BOARD_SIZE - 1 << " (top to bottom). Type -1 to quit game." << endl;
+            cin >> row;
+        } while (row < -1 || row >= BOARD_SIZE);
+        if (row == -1) break;
+        do {
+            cout << "Select a column from 0 to " << BOARD_SIZE - 1 << " (left to right). Type -1 to quit game." << endl;
+            cin >> col;
+        } while (col < -1 || col >= BOARD_SIZE);
+        if (col == -1) break;
 
-    //     board.play(BoardCoordinate{row, col});
-    //     cout << board;
+        board.play(BoardCoordinate{row, col});
+        cout << board;
 
-    //     int boardScore = board.getBoardScore();
-    //     cout << "Score: " << boardScore << endl;
-    //     cout << "ID: " << board.getID() << endl;
+        int boardScore = board.getBoardScore();
+        cout << "Score: " << boardScore << endl;
+        cout << "ID: " << board.getID() << endl;
 
-    //     if (boardScore == WIN_SCORE) {
-    //         cout << "Player X won!" << endl;
-    //         break;
-    //     }
-    //     else if (boardScore == -WIN_SCORE) {
-    //         cout << "Player O won!" << endl;
-    //         break;
-    //     }
-    //     else if (board.isFull()) {
-    //         if (boardScore > 0) {
-    //             cout << "Player X won!" << endl;
-    //         }
-    //         else if (boardScore < 0) {
-    //             cout << "Player O won!" << endl;
-    //         }
-    //         else {
-    //             cout << "Draw!" << endl;
-    //         }
-    //         break;
-    //     }
-    // }
+        if (boardScore == WIN_SCORE) {
+            cout << "Player X won!" << endl;
+            break;
+        }
+        else if (boardScore == -WIN_SCORE) {
+            cout << "Player O won!" << endl;
+            break;
+        }
+        else if (board.isFull()) {
+            if (boardScore > 0) {
+                cout << "Player X won!" << endl;
+            }
+            else if (boardScore < 0) {
+                cout << "Player O won!" << endl;
+            }
+            else {
+                cout << "Draw!" << endl;
+            }
+            break;
+        }
+    }
 }
 
 void task2() {
